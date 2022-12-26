@@ -4,8 +4,8 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../di/injector.dart';
-import '../../../utils/alert_util.dart';
+import '../../../../di/injector.dart';
+import '../../../../utils/alert_util.dart';
 
 part 'bloc/login_bloc.dart';
 

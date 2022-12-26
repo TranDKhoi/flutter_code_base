@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/global_keys.dart';
-import 'login/presentation/login.dart';
+import 'screens/login/login.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

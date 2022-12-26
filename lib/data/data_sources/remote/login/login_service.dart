@@ -1,14 +1,10 @@
 import 'package:dio/dio.dart';
 
-import '../../../../../config/data/remote/base_service.dart';
-import '../../../../../utils/dio_extension.dart';
-import '../../model/user_model.dart';
+import '../../../../utils/dio_extension.dart';
+import '../../../base/base_service.dart';
+import '../../../model/user_model.dart';
 
 class LoginService extends BaseService {
-  LoginService._();
-
-  static final ins = LoginService._();
-
   Future<UserModel> login() async {
     try {
       Future.delayed(const Duration(seconds: 3));

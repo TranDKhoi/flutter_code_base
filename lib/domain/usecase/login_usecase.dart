@@ -6,12 +6,12 @@ abstract class LoginUseCase {
 }
 
 class LoginUseCaseImpl implements LoginUseCase {
-  final LoginRepository _loginRepository;
+  LoginRepository loginRepository;
 
-  LoginUseCaseImpl(this._loginRepository);
+  LoginUseCaseImpl(this.loginRepository);
 
   @override
   Future<User> login() async {
-    return await _loginRepository.login();
+    return await loginRepository.login();
   }
 }

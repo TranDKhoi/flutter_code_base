@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '/utils/shared_service.dart';
-import 'features/app.dart';
+import 'presentation/app.dart';
 
 void main() async {
   await SharedService.init();
