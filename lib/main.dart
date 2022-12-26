@@ -14,3 +14,4 @@ void main() async {
 // equatable
 // dio or http
 // shared preferences
+// also clean architecture flutter plugin for faster generate folder

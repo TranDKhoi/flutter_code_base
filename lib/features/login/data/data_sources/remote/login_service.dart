@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 
 import '../../../../../config/data/remote/base_service.dart';
 import '../../../../../utils/dio_extension.dart';
-import '../../model/user_model.dart';
+import '../../models/user_model.dart';
 
 class LoginService extends BaseService {
   LoginService._();
