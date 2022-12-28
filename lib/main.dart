@@ -4,6 +4,7 @@ import '/utils/shared_service.dart';
 import 'features/app.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await SharedService.init();
 
   runApp(const MyApp());
