@@ -1,20 +1,21 @@
-import '../../domain/entities/user.dart';
+class UserModel {
+  String? name;
+  int? age;
 
-class UserModel extends User {
-  UserModel({String? name, int? age}) : super(name: name, age: age);
+  UserModel({
+    this.name,
+    this.age,
+  });
 
-  factory UserModel.fromJson(Map<String, dynamic> json) {
-    return UserModel(
-      name: json['name'],
-      age: json["age"],
-    );
+  UserModel.fromJson(Map<String, dynamic> json) {
+    name = json["name"];
+    age = json["age"];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{
-      "age": age,
-      "name": name,
+    return {
+      'name': name,
+      'age': age,
     };
-    return data;
   }
 }

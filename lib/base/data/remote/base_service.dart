@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 
 class BaseService {
-  static const String BASE_PATH = "https://my-custom-api.com/api/";
+  static const String BASE_PATH = "https://cliver-api.azurewebsites.net/api/";
 
   //api route
-  static const String LOGIN_PATH = "login";
+  static const String LOGIN_PATH = "auth/login";
 
   late Dio dio;
 
@@ -13,8 +13,8 @@ class BaseService {
     dio = Dio(
       BaseOptions(
         baseUrl: BASE_PATH,
-        connectTimeout: 15000,
-        receiveTimeout: 15000,
+        connectTimeout: 10000,
+        receiveTimeout: 10000,
         responseType: ResponseType.json,
       ),
     );
