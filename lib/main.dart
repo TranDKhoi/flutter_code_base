@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '/utils/shared_service.dart';
+import 'services/shared_service.dart';
 import 'features/app.dart';
 
 void main() async {
+  await _initialize.call();
+  runApp(const MyApp());
+}
+
+Future<void> _initialize() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SharedService.init();
-
-  runApp(const MyApp());
 }
 
 //here is the most basic package need for new project

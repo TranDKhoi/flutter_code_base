@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   controller: passwordController,
                 ),
                 ElevatedButton(
-                  onPressed: () => context.read<LoginBloc>().add(LoginClicked(
+                  onPressed: () => context.read<LoginBloc>().add(LoginButtonClicked(
                         email: emailController.text.trim(),
                         password: passwordController.text.trim(),
                       )),

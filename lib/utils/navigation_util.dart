@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_code_base/utils/global_keys.dart';
 
-class NavigationService {
+class NavigationUtil {
   static NavigatorState? get _navigatorKey => navigatorKey.currentState;
 
   static Future push({required Widget page}) async {

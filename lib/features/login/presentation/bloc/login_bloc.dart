@@ -2,17 +2,16 @@ part of login;
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   LoginBloc() : super(LoginState()) {
-    on<LoginClicked>(_loginClickedEvent);
+    on<LoginButtonClicked>(_loginClickedEvent);
   }
 
-  _loginClickedEvent(LoginClicked event, emit) async {
+  _loginClickedEvent(LoginButtonClicked event, emit) async {
     try {
       AlertUtil.showLoading();
       var res = await Injector.loginUseCase.login(event.email, event.password);
-      print(res.name);
+      AlertUtil.hideLoading();
     } catch (e) {
-      AlertUtil.showToast(e.toString());
+      ExceptionUtil.handle(e);
     }
-    AlertUtil.hideLoading();
   }
 }
