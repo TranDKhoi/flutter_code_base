@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_code_base/exceptions/app_exception.dart';
 
 import '../../utils/alert_util.dart';
 import '../../utils/extensions/dio_extension.dart';
+import '../exceptions/app_exception.dart';
 
 class ExceptionUtil {
   static void handle(e) {
@@ -10,14 +10,14 @@ class ExceptionUtil {
     if (e is DioError) {
       // error from api
       switch (e.type) {
-        case DioErrorType.response:
+        case DioErrorType.badResponse:
           AlertUtil.showToast(e.errorMessage);
           break;
-        case DioErrorType.other:
-          AlertUtil.showToast(e.error.message);
+        case DioErrorType.unknown:
+          AlertUtil.showToast(e.error.toString());
           break;
         default:
-          AlertUtil.showToast(e.error);
+          AlertUtil.showToast(e.error.toString());
           break;
       }
     } else if (e is AppException) {

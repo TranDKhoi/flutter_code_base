@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_code_base/utils/global_keys.dart';
+
+import 'global_keys.dart';
 
 class NavigationUtil {
   static NavigatorState? get _navigatorKey => navigatorKey.currentState;
