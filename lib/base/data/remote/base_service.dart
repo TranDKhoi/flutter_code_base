@@ -16,6 +16,7 @@ class BaseService {
         connectTimeout: const Duration(milliseconds: 10000),
         receiveTimeout: const Duration(milliseconds: 10000),
         responseType: ResponseType.json,
+        contentType: Headers.jsonContentType,
       ),
     );
   }

@@ -14,4 +14,12 @@ class SharedService {
   void setCurrentLang(String currentLang) {
     _pref.setString("language", currentLang);
   }
+
+  bool? getCurrentTheme() {
+    return _pref.getBool("theme");
+  }
+
+  void setCurrentTheme(bool isDark) {
+    _pref.setBool("theme", isDark);
+  }
 }

@@ -8,14 +8,13 @@ class AlertUtil {
         context: navigatorKey.currentContext!,
         barrierDismissible: false,
         builder: (context) {
-          return const Dialog(
-            insetPadding: EdgeInsets.zero,
-            backgroundColor: Colors.transparent,
-            child: Center(
-              child: CircularProgressIndicator(
-                strokeWidth: 2,
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              CircularProgressIndicator(
+                strokeWidth: 3,
               ),
-            ),
+            ],
           );
         });
   }
