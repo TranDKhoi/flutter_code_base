@@ -1,5 +1,6 @@
-import 'package:beloved_ver2/config/colors.dart';
 import 'package:flutter/material.dart';
+
+import 'colors.dart';
 
 class AppTheme {
   static final ThemeData lightTheme = ThemeData.light().copyWith(

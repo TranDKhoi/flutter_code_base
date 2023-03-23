@@ -13,6 +13,12 @@ class ExceptionUtil {
         case DioErrorType.badResponse:
           AlertUtil.showToast(e.errorMessage);
           break;
+        case DioErrorType.connectionTimeout:
+          AlertUtil.showToast(e.errorMessage);
+          break;
+        case DioErrorType.receiveTimeout:
+          AlertUtil.showToast(e.errorMessage);
+          break;
         case DioErrorType.unknown:
           AlertUtil.showToast(e.error.toString());
           break;

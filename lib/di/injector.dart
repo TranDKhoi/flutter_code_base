@@ -1,8 +1,11 @@
-import '../features/login/data/models/user_data_mapper.dart';
-import '../features/login/data/repositories/login_repository_impl.dart';
-import '../features/login/domain/use_cases/login_usecase.dart';
+import 'package:get_it/get_it.dart';
+import 'package:injectable/injectable.dart';
 
-class Injector {
-  static LoginUseCase get loginUseCase =>
-      LoginUseCaseImpl(LoginRepositoryImpl(UserDataMapper()));
+import 'injector.config.dart';
+
+final injector = GetIt.instance;
+
+@InjectableInit()
+Future<void> injectorInit() async {
+  injector.init();
 }

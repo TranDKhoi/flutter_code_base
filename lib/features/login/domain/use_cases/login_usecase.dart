@@ -1,5 +1,6 @@
-import 'package:flutter_code_base/exceptions/app_exception.dart';
+import 'package:injectable/injectable.dart';
 
+import '../../../../exceptions/app_exception.dart';
 import '../entities/user_entity.dart';
 import '../repositories/login_repository.dart';
 
@@ -7,6 +8,7 @@ abstract class LoginUseCase {
   Future<UserEntity> login(String email, String password);
 }
 
+@LazySingleton(as: LoginUseCase)
 class LoginUseCaseImpl implements LoginUseCase {
   final LoginRepository _loginRepository;
 

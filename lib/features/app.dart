@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/global_keys.dart';
+import '../config/theme.dart';
 import 'login/presentation/login.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,6 +14,8 @@ class MyApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       scaffoldMessengerKey: scaffoldKey,
       debugShowCheckedModeBanner: false,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
     );
   }
 }

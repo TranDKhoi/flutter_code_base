@@ -14,7 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => LoginBloc(),
+      create: (context) => injector<LoginBloc>(),
       child: Builder(
         builder: (BuildContext context) => Scaffold(
           body: Center(

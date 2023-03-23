@@ -19,3 +19,7 @@ Future<void> _initialize() async {
 // dio or http
 // shared preferences
 // also clean architecture flutter plugin for faster generate folder
+//build_runner
+//get_it
+//injectable
+//injectable_generator
